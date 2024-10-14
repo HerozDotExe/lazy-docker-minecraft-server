@@ -1,0 +1,8 @@
+#!/bin/bash
+
+if [ ! -f /data/lazymc.toml ]; then
+    echo Lazymc config not found, copying default...
+    cp /image/lazymc.toml /data/lazymc.toml
+fi
+
+lazymc -c /data/lazymc.toml
